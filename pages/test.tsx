@@ -11,6 +11,7 @@ const Test: NextPage = () => {
   const [a1, changea1] = React.useState("");
   const [a2, changea2] = React.useState("");
   const [a3, changea3] = React.useState("");
+  const [checked, changeChecked] = React.useState(false);
 
   const onFinish = (values: any) => {
     //
@@ -85,12 +86,16 @@ const Test: NextPage = () => {
               valuePropName="checked"
               wrapperCol={{ offset: 8, span: 16 }}
             >
-              <Checkbox>Поставь галочку, если ты котик</Checkbox>
+              <Checkbox checked={false} onChange={() => changeChecked(!checked)}>
+                Поставь галочку, если ты котик
+              </Checkbox>
             </Form.Item>
 
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Button
-                disabled={a1 !== "рыбы" || a2 !== "Валерия" || a3 !== "20"}
+                disabled={
+                  a1 !== "рыбы" || a2 !== "Валерия" || a3 !== "20" || checked
+                }
                 type="primary"
                 htmlType="submit"
               >
