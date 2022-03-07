@@ -33,7 +33,6 @@ const Home: NextPage = () => {
         <Button type="dashed" ghost className={styles.getPresentBtn}>
           <Link href="/test">Получить подарок</Link>
         </Button>
-        {/* <video src="/mainvideo.MOV" controls/> */}
       </main>
 
       <footer className={styles.footer}>With love by your friends ❤️</footer>

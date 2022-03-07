@@ -158,3 +158,8 @@
 .video {
   height: 100vh;
 }
+
+.letter {
+  margin-top: 20px;
+  width: 70vw;
+}

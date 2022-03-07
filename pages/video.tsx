@@ -6,6 +6,9 @@ import { Button, Carousel, Checkbox, Form, Input, PageHeader } from "antd";
 import "antd/dist/antd.dark.css";
 import Link from "next/link";
 import React from "react";
+import MessageOutlined from "@ant-design/icons";
+import { Space } from "antd";
+
 
 const Video: NextPage = () => {
   const [answersAreFilled, changeAnswersState] = React.useState(false);
@@ -36,8 +39,11 @@ const Video: NextPage = () => {
       <main className={styles.main}>
         <h1>Ты молодец!!! Держи подарок</h1>
         <div className={styles.section}>
-          <video className={styles.video} src="/mainvideo.MOV" controls/>
+          <video className={styles.video} src="/mainvideo.MOV" controls />
         </div>
+        <Button type="dashed" ghost className={styles.getPresentBtn}>
+          <Link href="/messages">Получить еще подарок</Link>
+        </Button>
       </main>
 
       <footer className={styles.footer}>With love by your friends ❤️</footer>
